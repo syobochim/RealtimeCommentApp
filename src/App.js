@@ -29,9 +29,8 @@ function App() {
     getComments('sample');
     const subscription = API.graphql(graphqlOperation(onCreateComment)).subscribe({
       next: (msg) => {
-        console.log('allcomments subscription fired')
         const newComment = msg.value.data.onCreateComment;
-        // console.log('comment: ', comment)
+        console.log('allcomments subscription fired: ', JSON.stringify(msg.value.data.onCreateComment))
         setNewComment(newComment)
       }
     });
