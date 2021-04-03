@@ -30,3 +30,31 @@ export const listComments = /* GraphQL */ `
     }
   }
 `;
+export const listCommentSortedByTimestamp = /* GraphQL */ `
+  query ListCommentSortedByTimestamp(
+    $event: String
+    $timestamp: ModelIntKeyConditionInput
+    $sortDirection: ModelSortDirection
+    $filter: ModelCommentFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    listCommentSortedByTimestamp(
+      event: $event
+      timestamp: $timestamp
+      sortDirection: $sortDirection
+      filter: $filter
+      limit: $limit
+      nextToken: $nextToken
+    ) {
+      items {
+        id
+        event
+        username
+        comment
+        timestamp
+      }
+      nextToken
+    }
+  }
+`;

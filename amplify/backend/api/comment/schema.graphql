@@ -1,8 +1,11 @@
-type Comment @model(
+type Comment
+@model(
   mutations: {create: "createComment", delete: "deleteComment", update: null}
   timestamps: null
   subscriptions: {level: public}
-) {
+)
+@key(name: "SortByTimestamp", fields:["event", "timestamp"], queryField: "listCommentSortedByTimestamp")
+{
   id: ID!
   event: String!
   username: String
