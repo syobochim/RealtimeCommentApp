@@ -1,15 +1,15 @@
 {
-  "dev": {
+  "prod": {
     "awscloudformation": {
-      "AuthRoleName": "amplify-commentapp-dev-130847-authRole",
-      "UnauthRoleArn": "arn:aws:iam::488622630391:role/amplify-commentapp-dev-130847-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::488622630391:role/amplify-commentapp-dev-130847-authRole",
+      "AuthRoleName": "amplify-commentapp-prod-154453-authRole",
+      "UnauthRoleArn": "arn:aws:iam::488622630391:role/amplify-commentapp-prod-154453-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::488622630391:role/amplify-commentapp-prod-154453-authRole",
       "Region": "ap-northeast-1",
-      "DeploymentBucketName": "amplify-commentapp-dev-130847-deployment",
-      "UnauthRoleName": "amplify-commentapp-dev-130847-unauthRole",
-      "StackName": "amplify-commentapp-dev-130847",
-      "StackId": "arn:aws:cloudformation:ap-northeast-1:488622630391:stack/amplify-commentapp-dev-130847/4ba2d3d0-9432-11eb-b257-0e214b799c89",
-      "AmplifyAppId": "dk2izjuiy5bxv"
+      "DeploymentBucketName": "amplify-commentapp-prod-154453-deployment",
+      "UnauthRoleName": "amplify-commentapp-prod-154453-unauthRole",
+      "StackName": "amplify-commentapp-prod-154453",
+      "StackId": "arn:aws:cloudformation:ap-northeast-1:488622630391:stack/amplify-commentapp-prod-154453/1a13bf30-9448-11eb-8d87-0e76457f505d",
+      "AmplifyAppId": "d3ktz9imnbdq18"
     }
   }
 }

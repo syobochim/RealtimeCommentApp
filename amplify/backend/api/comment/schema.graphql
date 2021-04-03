@@ -4,10 +4,10 @@ type Comment
   timestamps: null
   subscriptions: {level: public}
 )
-@key(name: "SortByTimestamp", fields:["event", "timestamp"], queryField: "listCommentSortedByTimestamp")
+@key(name: "SortByTimestamp", fields:["eventId", "timestamp"], queryField: "listCommentSortedByTimestamp")
 {
   id: ID!
-  event: String!
+  eventId: String!
   username: String
   comment: String!
   timestamp: Int!

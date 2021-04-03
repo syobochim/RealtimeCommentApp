@@ -8,7 +8,7 @@ export const createComment = /* GraphQL */ `
   ) {
     createComment(input: $input, condition: $condition) {
       id
-      event
+      eventId
       username
       comment
       timestamp
@@ -22,7 +22,7 @@ export const deleteComment = /* GraphQL */ `
   ) {
     deleteComment(input: $input, condition: $condition) {
       id
-      event
+      eventId
       username
       comment
       timestamp

@@ -5,7 +5,7 @@ export const getComment = /* GraphQL */ `
   query GetComment($id: ID!) {
     getComment(id: $id) {
       id
-      event
+      eventId
       username
       comment
       timestamp
@@ -21,7 +21,7 @@ export const listComments = /* GraphQL */ `
     listComments(filter: $filter, limit: $limit, nextToken: $nextToken) {
       items {
         id
-        event
+        eventId
         username
         comment
         timestamp
@@ -32,7 +32,7 @@ export const listComments = /* GraphQL */ `
 `;
 export const listCommentSortedByTimestamp = /* GraphQL */ `
   query ListCommentSortedByTimestamp(
-    $event: String
+    $eventId: String
     $timestamp: ModelIntKeyConditionInput
     $sortDirection: ModelSortDirection
     $filter: ModelCommentFilterInput
@@ -40,7 +40,7 @@ export const listCommentSortedByTimestamp = /* GraphQL */ `
     $nextToken: String
   ) {
     listCommentSortedByTimestamp(
-      event: $event
+      eventId: $eventId
       timestamp: $timestamp
       sortDirection: $sortDirection
       filter: $filter
@@ -49,7 +49,7 @@ export const listCommentSortedByTimestamp = /* GraphQL */ `
     ) {
       items {
         id
-        event
+        eventId
         username
         comment
         timestamp

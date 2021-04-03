@@ -5,7 +5,7 @@ export const onCreateComment = /* GraphQL */ `
   subscription OnCreateComment {
     onCreateComment {
       id
-      event
+      eventId
       username
       comment
       timestamp
@@ -16,7 +16,7 @@ export const onDeleteComment = /* GraphQL */ `
   subscription OnDeleteComment {
     onDeleteComment {
       id
-      event
+      eventId
       username
       comment
       timestamp
