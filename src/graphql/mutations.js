@@ -11,8 +11,7 @@ export const createComment = /* GraphQL */ `
       event
       username
       comment
-      createdAt
-      updatedAt
+      timestamp
     }
   }
 `;
@@ -26,8 +25,7 @@ export const deleteComment = /* GraphQL */ `
       event
       username
       comment
-      createdAt
-      updatedAt
+      timestamp
     }
   }
 `;

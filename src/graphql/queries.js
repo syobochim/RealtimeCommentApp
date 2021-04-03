@@ -8,8 +8,7 @@ export const getComment = /* GraphQL */ `
       event
       username
       comment
-      createdAt
-      updatedAt
+      timestamp
     }
   }
 `;
@@ -25,8 +24,7 @@ export const listComments = /* GraphQL */ `
         event
         username
         comment
-        createdAt
-        updatedAt
+        timestamp
       }
       nextToken
     }

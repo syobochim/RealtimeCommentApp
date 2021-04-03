@@ -1,6 +1,11 @@
-type Comment @model {
+type Comment @model(
+  mutations: {create: "createComment", delete: "deleteComment", update: null}
+  timestamps: null
+  subscriptions: {level: public}
+) {
   id: ID!
   event: String!
   username: String
-  comment: String
+  comment: String!
+  timestamp: Int!
 }
