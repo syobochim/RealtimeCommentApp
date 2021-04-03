@@ -1,0 +1,6 @@
+type Comment @model {
+  id: ID!
+  event: String!
+  username: String
+  comment: String
+}
