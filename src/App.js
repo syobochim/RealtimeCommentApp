@@ -16,7 +16,7 @@ function App() {
   const getComments = async (eventId) => {
     const res = await API.graphql(graphqlOperation(listCommentSortedByTimestamp, {
       eventId: eventId,
-      sortDirection: 'DESC',
+      sortDirection: 'ASC',
       limit: 20 //default = 10
       // nextToken: nextToken,
     }));
@@ -47,8 +47,9 @@ function App() {
     <div className="App">
       <ul>
         {comment.map(item => {
-          const date = new Date(Date.UTC(item.timestamp))
-          return (<li>{item.comment} : {item.timestamp}</li>)
+          const date = new Date(item.timestamp * 1000)
+          const user = item.username ? item.username : 'ゲスト'
+          return (<li key={item.id}>{user} : {item.comment} : {date.toLocaleDateString() + " " + date.toLocaleTimeString()}</li>)
         })}
       </ul>
     </div>
